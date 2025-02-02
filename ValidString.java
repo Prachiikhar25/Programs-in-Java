@@ -27,6 +27,8 @@ public class ValidString {
 	}
 
 	public static void main(String args[]) {
+		// how can i get the valid paranthesis
+
 		String s = "(((((*(()((((*((**(((()()*)()()()*((((**)())*)*)))))))(())(()))())((*()()(((()((()*(())*(()**)()(())";
 		checkValidString(s);
 	}
