@@ -16,6 +16,59 @@ public class PalindromeCheck {
 	}
 }
 
+// way 1
+/*
+ * public class Solution {
+ * public static Boolean isReflectionEqual(String s) {
+ * int left = 0, right = s.length() - 1;
+ * 
+ * while (left < right) {
+ * if (s.charAt(left) != s.charAt(right)) {
+ * return false;
+ * }
+ * left++;
+ * right--;
+ * }
+ * return true;
+ * }
+ * }
+ */
+
+// way 2
+
+/*
+ * import java.util.*;
+ * import java.io.*;
+ * 
+ * public class Solution {
+ * public static Boolean isReflectionEqual(String s) {
+ * // Reverse the string using StringBuilder
+ * StringBuilder sb = new StringBuilder(s);
+ * String sr = sb.reverse().toString();
+ * 
+ * // Compare actual contents using equals()
+ * return s.equals(sr);
+ * }
+ * }
+ * 
+ */
+
+// way 3
+/*
+ * import java.util.* ;
+ * import java.io.*;
+ * public class Solution {
+ * public static Boolean isReflectionEqual(String s) {
+ * // Write your code here
+ * StringBuilder sb = new StringBuilder(s);
+ * String sr= sb.reverse().toString();
+ * return s.equals(sr);
+ * //mera code sirf palindrome hai ya nahi check kar rha
+ * }
+ * }
+ * 
+ */
+
 // //palindrome I need to reverse a string
 // int i=0;
 // int n=s.length();
