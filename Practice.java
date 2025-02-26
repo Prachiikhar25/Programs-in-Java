@@ -3,25 +3,32 @@ package LeetCodeArray;
 import java.util.Arrays;
 
 public class Practice {
-	public static int[] twosum(int nums[], int target) {
-		for (int i = 0; i < nums.length; i++) {
-			for (int j = i + 1; j < nums.length; j++) {
-				if (nums[i] + nums[j] == target) {
-					return new int[] { nums[i], nums[j] };
-
-				}
+	public static int[] sort(int arr[]) {
+		int key;
+		int n = arr.length;
+		int j;
+		for (int i = 1; i < n; i++) {
+			j = i - 1;
+			key = arr[i];
+			while (j >= 0 && arr[j] > key) {
+				arr[j + 1] = arr[j];
+				--j;
 			}
+			arr[j + 1] = key;
 		}
-		return new int[] { 0, 0 };
+		return arr;
 	}
 
+	// Insertion sort
 	public static void main(String args[]) {
-		// twosum ke problem mai
-		int nums[] = { 2, 7, 11, 15 };
-		int target = 9;
-		System.out.println("Two sum is" + Arrays.toString(twosum(nums, target)));
 
+		int arr[] = { 2, 1, 3, 4, 5 };
+		sort(arr);
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(" " + arr[i]);
+		}
 	}
+
 }
 
 // Correct way to return array is:>>
