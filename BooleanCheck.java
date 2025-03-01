@@ -1,3 +1,5 @@
+package LeetCodeArray;
+
 import java.util.*;
 
 public class BooleanCheck {
